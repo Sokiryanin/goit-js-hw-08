@@ -1,14 +1,14 @@
 // Add imports above this line
-import { galleryItems } from "./gallery-items";
+import { galleryItems } from './gallery-items';
 
-import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
 console.log(galleryItems);
-const divGallery = document.querySelector(".gallery");
+const divGallery = document.querySelector('.gallery');
 const gallaryMarkup = createGalleryCardMarkup(galleryItems);
 
-divGallery.insertAdjacentHTML("beforeend", gallaryMarkup);
+divGallery.insertAdjacentHTML('beforeend', gallaryMarkup);
 
 function createGalleryCardMarkup(galleryItems) {
   return galleryItems
@@ -25,10 +25,10 @@ function createGalleryCardMarkup(galleryItems) {
 </a>
 </li>`
     )
-    .join("");
+    .join('');
 }
 
-lightbox = new SimpleLightbox(".gallery a", {
-  captionsData: "alt",
+const lightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
   captionDelay: 250,
 });
